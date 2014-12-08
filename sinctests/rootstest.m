@@ -1,10 +1,10 @@
 function pass = rootstest
 % build three sincfuns and check that they integrate satisfactorily
 
-f = @(x) sin(2*pi*x); ff = sincfun(f);   % functions and sincfuns
+f = @(x) sin(2*pi*x) - 0.1; ff = sincfun(f);   % functions and sincfuns
 g = @(x) sqrt(x).*cos(10*pi*x); gg = sincfun(g);   % recursive example
 
-rts_f = (0:0.5:1)';
+rts_f = [0.015942140214630;0.484057859785366];
 rts_g = [0;(0.05:0.1:0.95)'];
 
 test_tol = 10*sincfunpref('tol');
